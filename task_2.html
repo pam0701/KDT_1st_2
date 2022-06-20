@@ -1,0 +1,91 @@
+<!-- 내용 : 오늘 배운 CSS 선택자를 모두 사용하기 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 링크 방식 css 적용 -->
+    <link href="font.css" rel="stylesheet">
+    <!-- 내장 방식 css 적용 -->
+    <style>
+        tr .inform{
+            font-weight: bold;
+        }
+        .title{
+            background-color: salmon;
+        }
+        #id_num{
+            color: darkgrey;
+        }
+        .curi1 +li{
+            color: brown;
+        }
+        ul> .title{
+            font-size: 20px;
+        }
+        a:hover{
+            color: skyblue;
+        }
+        input:focus{
+            background-color: tan;
+        }
+        [type ="password"]{
+            color: firebrick;
+        }
+        h2.inform:active{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h1 class="title"><b><a href = "https://codingon.co.kr/" taget="_blank">코딩온</a> 웹개발자 양성 지원서</b></h1>
+    <tr>
+        <pre>  <i>코딩온 | 스프레틱스</i>는 온오프라인 SW교육 전문 플랫폼입니다.
+            SW 개발 경험이 없는 비전공자 출신도 
+                웹 풀스택 개발자가 될 수 있습니다.
+                지금 바로 도전하세요! <br />
+            </pre>
+                <img src ="https://d2iwdqgro8i2ew.cloudfront.net/codingon/pr/codingon_logo_letter.png"
+                alt = "코딩온 로고">
+                <h2 class ="inform"><strong>당신의 정보를 알려주세요</strong></h2>      
+    </tr>
+    <hr />
+    <p class="name">성명    <input type ="text" value="name"></p>
+    <p class="age">나이    <input></p>
+    <p class="gender">성별    <label><input type = "checkbox" name ="여" value ="여"> 여</label>
+        <label><input type = "checkbox" name ="여" value="남">남</label></p>
+    <p id ="id_num">주민등록번호   <input type ="password" placeholder="******-*******" disabled></p>
+    <p class ="email">이메일    <input type="email" placeholder="이메일 주소@포털 주소"></p>
+    <p class="phone">전화번호    <input type="text" placeholder="010-****-****로 작성해주세요"></p>
+
+    <p><input type="submit" value="Submit"> <input type="reset" value="Reset"></p>
+</center>
+<hr />
+    <h1><em>교육과정 살펴보기</em></h1>
+    <img src="커리큘럼.jpg" alt ="커리큘럼">
+    <ul>
+        <li class = "title"> HTML</li>
+            <ol>
+                <li class ="curi">태그</li>
+                <li class ="curi">html 페이지 만들어보기</li>
+                <li class ="curi">반응형 웹</li>
+            </ol>
+        <li class="title"> CSS</li>
+            <ol>
+                <li class ="curi">웹페이지 디자인</li>
+                <li class ="curi">선택자</li>
+                <li class ="curi">선택자 활용</li>
+            </ol>
+            <li class="title"> JAVA Script</li>
+            <ol>
+                <li class ="curi1">비동기 프로그래밍</li>
+                <li class ="curi2">API 사용</li>
+                <li class ="curi3">React</li>
+            </ol>
+    </ul>
+
+</body>
+</html>
